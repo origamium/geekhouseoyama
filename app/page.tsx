@@ -297,8 +297,6 @@ export default function Home() {
             <li>自治会費</li>
             <li>その他設備費</li>
           </ul>
-        </div>
-        <div className="mt-4">
           <h3 className="text-lg font-semibold text-foreground">
             各種割引（重複での割引なし）
           </h3>
