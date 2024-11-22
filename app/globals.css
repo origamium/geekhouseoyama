@@ -70,3 +70,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+li {
+  margin-bottom: 8px;
+}

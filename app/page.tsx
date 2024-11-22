@@ -12,6 +12,7 @@ import {
   Cigarette,
   CookingPot,
   HeartPulse,
+  CheckCircle,
 } from "lucide-react";
 import { Section } from "@/components/Section";
 
@@ -90,6 +91,35 @@ const features = [
   },
 ];
 
+const amenities = [
+  "ドラム式洗濯乾燥機",
+  "食器洗浄乾燥機",
+  "電子レンジ",
+  "冷蔵庫・冷凍庫",
+  "天然水サーバー",
+  "SodaStream",
+  "Dysonのすごい掃除機",
+  "モノクロ複合機（プリンター、スキャナー、コピー機）",
+  "DENON製AVアンプ",
+  "DENON製プリメインアンプ",
+  "YAMAHA製ハイレゾスピーカー",
+  "Sony BRAVIA 4Kテレビ",
+  "Xbox Series X",
+  "PlayStation 5(ディスクドライブ搭載モデル)",
+  "Nintendo Switch",
+  "Apple TV 4K",
+];
+
+const facilities = [
+  "ユニットバス",
+  "洗面台",
+  "トイレ（2個）",
+  "キッチン",
+  "リビング",
+  "音響室",
+  "庭",
+];
+
 export default function Home() {
   return (
     <main className="p-8 font-[family-name:var(--font-geist-sans)]">
@@ -101,7 +131,7 @@ export default function Home() {
           <p className="text-lg text-muted-foreground">
             栃木県小山市に新設予定のギークとかが集まってほしいシェアハウスです。2025年開設予定。
             <br />
-            5部屋の一軒家（何LDKかは忘れた）、庭付き、猫付き。
+            築10年ぐらいの一軒家（何LDKかは忘れた）、庭付き、猫付き。
             <br />
             最大3人の入居を予定しています。（2人以上の場合、1部屋は複数人でシェアしていただきます）
           </p>
@@ -132,6 +162,33 @@ export default function Home() {
       </Section>
       <Section>
         <h2 className="pb-4 text-2xl font-extrabold leading-tight tracking-tighter md:text-4xl">
+          設備
+        </h2>
+        <div>
+          <h3 className="text-lg font-semibold text-foreground">設備</h3>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {facilities.map((amenity, index) => (
+              <li key={index} className="flex items-center space-x-2">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                <span>{amenity}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold text-foreground">共有備品</h3>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {amenities.map((amenity, index) => (
+              <li key={index} className="flex items-center space-x-2">
+                <CheckCircle className="h-5 w-5 text-primary" />
+                <span>{amenity}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+      <Section>
+        <h2 className="pb-4 text-2xl font-extrabold leading-tight tracking-tighter md:text-4xl">
           入居要件
         </h2>
         <div className="flex flex-col gap-4">
@@ -152,21 +209,23 @@ export default function Home() {
         <div className="flex flex-col gap-4 mt-4">
           <h3 className="text-lg font-semibold text-foreground">歓迎要件</h3>
           <ul className="list-disc pl-4">
-            <li>ギークな趣味を持っていること</li>
+            <li>ものづくりが好き</li>
             <li>何かを作る、描く、書くことが好きなこと</li>
             <li>モータースポーツ好きなこと</li>
             <li>お酒が好きなこと(20歳未満には飲ませないこと)</li>
           </ul>
         </div>
         <div className="mt-4">
-          <h3 className="text-lg font-semibold text-foreground">その他</h3>
+          <h3 className="text-lg font-semibold text-foreground">
+            入居にあたって
+          </h3>
           <p>
             <strong>入居にはarclispによる審査が必要です。</strong>
             審査には入居希望者の身元確認の確認が必要です。また、Twitter(X)、BlueskyなどのSNSのアカウントを確認します。
             <br />
             審査はわりと厳しめに行う予定です（たくさんの反省がここに込められている）が、基本的に人としてちゃんとしていれば、問題ないと思います。
             <br />
-            また、入居には保証金（デポジット）が必要です。保証金は家賃の1ヶ月分です。退去時に家賃滞納がない場合は全額返金します。
+            また、入居には保証金（デポジット）が必要です。保証金は家賃の1ヶ月分です。退去時に家賃滞納がなく、汚損もない場合は全額返金します。
             <br />
             未成年の入居可も考えていますが、その際は内覧ないし契約時に保護者の同伴および同意が必要です。
             <br />
@@ -174,6 +233,45 @@ export default function Home() {
               問題行動があった場合、即時退去していただく場合があります。
             </strong>
           </p>
+          <div className="mt-4"></div>
+        </div>
+        <div className="mt-4">
+          <h3 className="text-lg font-semibold text-foreground">
+            細かい規定や補足
+          </h3>
+          <ul className="list-disc pl-4">
+            <li>
+              エアコンを除く、大電力を消費する機器の使用は事前にご相談ください。3Dプリンタ、ハイエンドPC（PSUが800W以上のもの）などが対象です。
+              <br />
+              また、電気代の負担をお願いする場合があります。
+            </li>
+            <li>
+              物理サーバーの運用は許可制、かつ個室契約の方のみです。共用部、シェア部屋の設置は騒音の関係で許可できません。また、ノートパソコンのサーバー運用は一律で禁止です。
+              <br />
+              許可される物理サーバーの形式は、最初からサーバーとして設計されたもの、冷却性能が高い、あるいは高くしたデスクトップPC、Raspberry
+              Piなどです。
+              <br />
+              サーバー運用には、電気代の負担をお願いする場合があります。
+            </li>
+            <li>
+              電気ヒーターの利用は禁止です。また、同様に火災の危険性が高い機器の使用は禁止です。
+            </li>
+            <li>
+              強い衝撃を与えてしまったリチウムイオンバッテリー、または劣化が進んだリチウムイオンバッテリーの利用は禁止です。近所に回収してくれるところがあります。
+            </li>
+            <li>
+              NHKにお金を払ってない上に、アンテナが壊れて地上波放送の受信ができません。BS/CS放送も受信できません。
+            </li>
+            <li>音響室の利用は予約優先です。</li>
+            <li>
+              ベランダのある部屋に住まわれる場合、洗濯物の乾燥、布団干しなどにご協力いただきます。
+            </li>
+            <li>
+              部外者の立ち入り、パーティー開催は事前に許可が必要です。また、パーティー開催時は住民への配慮をお願いします。
+              <br />
+              また、部外者の宿泊も事前に許可が必要です。宿泊料金は別途かかります。
+            </li>
+          </ul>
         </div>
       </Section>
       <Section>
@@ -206,7 +304,7 @@ export default function Home() {
           </h3>
           <ul className="list-disc pl-4">
             <li>学生割引：-¥5,000</li>
-            <li>ギーク割：-¥5,000</li>
+            <li>ギーク・クリエイター割：-¥5,000</li>
           </ul>
         </div>
       </Section>
