@@ -14,8 +14,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ギークハウスおやま（予定）",
-  description: "栃木県小山市に新規開設予定のシェアハウス、ギークハウスおやま",
+  title: "ギークハウス小山",
+  description:
+    "栃木県小山市に新規開設のシェアハウス、ギークハウス小山。充実の設備が特徴です。",
 };
 
 export default function RootLayout({

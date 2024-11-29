@@ -27,13 +27,13 @@ const features = [
     icon: Gamepad2,
     title: "ゲーム機完備",
     description:
-      "PlayStation 5(ディスクドライブ搭載モデル)、Xbox Series X、Nintendo Switch(有機ELモデル)を用意しています。また、PlayStation VR 2も利用可能です。",
+      "PlayStation 5 Pro、PSVR2、Xbox Series X、Nintendo Switch(有機ELモデル)を用意しています。",
   },
   {
     icon: Speaker,
-    title: "充実したオーディオ・ビジュアル設備",
+    title: "ホームシネマ設備",
     description:
-      "DENON製最高級AVアンプ、プリメインアンプを筆頭に、7chサラウンドシステム（13.1chに改築予定あり）、Sony BRAVIA 4K 120FPS Dolby Vision対応65インチテレビ設置の音響設備のある部屋があります。",
+      "DENON製最高級AVアンプ、DENON製高級プリメインアンプ、YAMAHA製スピーカーによって構築されているサラウンドシステム、Sony BRAVIA 65インチテレビ設備のある音響部屋があります。",
   },
   {
     icon: MonitorPlay,
@@ -51,7 +51,7 @@ const features = [
     icon: TramFront,
     title: "交通アクセス",
     description:
-      "最寄りの小山駅から徒歩10分、東京駅まで最短43分（新幹線）。都内通勤にも便利です。",
+      "最寄りの小山駅から徒歩8分、東京駅まで最短43分（新幹線）。都内通勤にも便利です。駅の自転車置場も格安。",
   },
   {
     icon: WashingMachine,
@@ -63,7 +63,7 @@ const features = [
     icon: CookingPot,
     title: "料理好き歓迎",
     description:
-      "キッチンには冷蔵庫、電子レンジ（古い）、全自動食洗機、コンロ、ハンドブレンダー、低温調理器、圧力鍋など揃っています。また、スパイス、ハーブ類も常時豊富に揃えています。",
+      "キッチンには冷蔵庫、電子レンジ、全自動食洗機、コンロ、ハンドブレンダー、低温調理器、圧力鍋など揃っています。また、スパイス、ハーブ類も常時豊富に揃えています。",
   },
   {
     icon: Car,
@@ -106,6 +106,7 @@ const amenities = [
   "Sony BRAVIA 4Kテレビ",
   "Xbox Series X",
   "PlayStation 5(ディスクドライブ搭載モデル)",
+  "PlayStation 5 Pro",
   "Nintendo Switch",
   "Apple TV 4K",
 ];
@@ -126,14 +127,12 @@ export default function Home() {
       <Section>
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-            ギークハウスおやま（仮称）
+            ギークハウス小山
           </h1>
           <p className="text-lg text-muted-foreground">
-            栃木県小山市に新設予定のギークとかが集まってほしいシェアハウスです。2025年開設予定。
+            栃木県小山市に新設のシェアハウスです。2025年1月開設。
             <br />
             築10年ぐらいの一軒家（何LDKかは忘れた）、庭付き、猫付き。
-            <br />
-            最大3人の入居を予定しています。（2人以上の場合、1部屋は複数人でシェアしていただきます）
           </p>
         </div>
       </Section>
@@ -230,7 +229,7 @@ export default function Home() {
             未成年の入居可も考えていますが、その際は内覧ないし契約時に保護者の同伴および同意が必要です。
             <br />
             <strong>
-              問題行動があった場合、即時退去していただく場合があります。
+              問題行動等が確認された場合、即時退去していただく場合があります。
             </strong>
           </p>
           <div className="mt-4"></div>
